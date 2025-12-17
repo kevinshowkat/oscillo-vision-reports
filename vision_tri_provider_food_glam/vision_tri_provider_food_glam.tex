@@ -1,0 +1,174 @@
+\documentclass[10pt]{article}
+
+\usepackage[margin=0.75in]{geometry}
+
+\usepackage{booktabs}
+
+\usepackage{tabularx}
+
+\usepackage{xcolor}
+
+\usepackage{tcolorbox}
+
+\usepackage{titlesec}
+
+\usepackage{helvet}
+
+\usepackage{enumitem}
+
+\usepackage{multicol}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\definecolor{oscilloPrimary}{HTML}{2432FF}
+
+\titleformat*{\section}{\Large\bfseries}
+
+\titleformat*{\subsection}{\large\bfseries}
+
+\setlength{\parskip}{0.4ex}
+
+\setlength{\parindent}{0ex}
+
+\setlength{\columnsep}{1em}
+
+\begin{document}
+
+\small
+
+\begin{center}
+
+{\LARGE Oscillo Vision Preference Audit}\\
+
+{\large December 11, 2025}
+
+\end{center}
+
+\begin{tcolorbox}[colback=oscilloPrimary!7,colframe=oscilloPrimary,title=Test Snapshot]
+\textbf{Date:} December 11, 2025 \
+\textbf{Runs Logged:} 66 \
+\textbf{Matchups Observed:} 535 \
+\textbf{Breakdown:} Anthropic · Claude Opus 4.5: 21 \ Google · Gemini 3 Pro: 21 \ OpenAI · GPT-5.1 (Thinking): 24
+\end{tcolorbox}
+
+\begin{tabularx}{\textwidth}{lccX}
+\toprule
+Provider & Runs & Matchups & Leading Models \\
+\midrule
+Anthropic · Claude Opus 4.5 & 21 & 168 & Seedream 4.0 (25.0\%), Hunyuan Image v3 (25.0\%) \\
+Google · Gemini 3 Pro & 21 & 168 & Hunyuan Image v3 (47.6\%) \\
+OpenAI · GPT-5.1 (Thinking) & 24 & 199 & Hunyuan Image v3 (24.6\%) \\
+\bottomrule
+\end{tabularx}
+
+\subsection*{Anthropic · Claude Opus 4.5}
+\begin{itemize}[leftmargin=*]
+\item Runs: 21 (matchups: 168).
+\item Leading models: Seedream 4.0, Hunyuan Image v3.
+\item Group-preference leaders: Seedream 4.0, Gemini 2.5 Flash Image (retired), Flux Kontext Max (retired), Hunyuan Image v3.
+\item Average decision time when choosing winners: 4.08s.
+\item Runs with shared leaders: 21.
+\end{itemize}
+\textbf{Divergence rationale:} Personal vs group divergence: 168/168 (100.0\\%). Example: Personal B – Option B better captures the "detail shot" and "negative copy space in the upper right" requirements with a cleaner, more focused composi... | Group undefined – —
+\begin{tabularx}{\columnwidth}{lccrX}
+\toprule
+Model & Win Share & 95\% CI & Avg. Decision (s) & Momentum \\
+\midrule
+Seedream 4.0 & 25.0\% & [19.1\%, 32.1\%] & 3.93 & \textcolor{oscilloPrimary}{\rule{1.00cm}{0.15cm}} \\
+Hunyuan Image v3 & 25.0\% & [19.1\%, 32.1\%] & 4.18 & \textcolor{oscilloPrimary}{\rule{1.00cm}{0.15cm}} \\
+Flux Kontext Max (retired) & 13.7\% & [9.3\%, 19.7\%] & 4.32 & \textcolor{oscilloPrimary}{\rule{0.80cm}{0.15cm}} \\
+GPT-Image 1 & 12.5\% & [8.3\%, 18.4\%] & 3.90 & \textcolor{oscilloPrimary}{\rule{0.80cm}{0.15cm}} \\
+Gemini 2.5 Flash Image (retired) & 12.5\% & [8.3\%, 18.4\%] & 4.25 & \textcolor{oscilloPrimary}{\rule{0.80cm}{0.15cm}} \\
+Imagen 4 Ultra & 11.3\% & [7.4\%, 17.0\%] & 3.92 & \textcolor{oscilloPrimary}{\rule{0.80cm}{0.15cm}} \\
+\bottomrule
+\end{tabularx}
+
+\textbf{Group preference (crowd guess)}
+\begin{tabularx}{\columnwidth}{lccrX}
+\toprule
+Model & Win Share & 95\% CI & Avg. Decision (s) & Momentum \\
+\midrule
+Seedream 4.0 & 25.0\% & [19.1\%, 32.1\%] & -- & \textcolor{oscilloPrimary}{\rule{1.00cm}{0.15cm}} \\
+Gemini 2.5 Flash Image (retired) & 25.0\% & [19.1\%, 32.1\%] & -- & \textcolor{oscilloPrimary}{\rule{1.00cm}{0.15cm}} \\
+Flux Kontext Max (retired) & 25.0\% & [19.1\%, 32.1\%] & -- & \textcolor{oscilloPrimary}{\rule{1.00cm}{0.15cm}} \\
+Hunyuan Image v3 & 25.0\% & [19.1\%, 32.1\%] & -- & \textcolor{oscilloPrimary}{\rule{1.00cm}{0.15cm}} \\
+\bottomrule
+\end{tabularx}
+
+\subsection*{Google · Gemini 3 Pro}
+\begin{itemize}[leftmargin=*]
+\item Runs: 21 (matchups: 168).
+\item Leading models: Hunyuan Image v3.
+\item Group-preference leaders: Seedream 4.0, Gemini 2.5 Flash Image (retired), Flux Kontext Max (retired), Hunyuan Image v3.
+\item Average decision time when choosing winners: 8.10s.
+\item Runs with shared leaders: 0.
+\end{itemize}
+\textbf{Divergence rationale:} Personal vs group divergence: 168/168 (100.0\\%). Example: Personal A – Option A better captures the "Brooklyn loft" aesthetic and fulfills more specific details from the prompt, such as the "matcha set" and "... | Group undefined – —
+\begin{tabularx}{\columnwidth}{lccrX}
+\toprule
+Model & Win Share & 95\% CI & Avg. Decision (s) & Momentum \\
+\midrule
+Hunyuan Image v3 & 47.6\% & [40.2\%, 55.1\%] & 7.81 & \textcolor{oscilloPrimary}{\rule{1.90cm}{0.15cm}} \\
+GPT-Image 1 & 23.8\% & [18.0\%, 30.8\%] & 7.86 & \textcolor{oscilloPrimary}{\rule{0.95cm}{0.15cm}} \\
+Imagen 4 Ultra & 22.0\% & [16.4\%, 28.9\%] & 8.72 & \textcolor{oscilloPrimary}{\rule{0.88cm}{0.15cm}} \\
+Flux Kontext Max (retired) & 3.0\% & [1.3\%, 6.8\%] & 9.67 & \textcolor{oscilloPrimary}{\rule{0.80cm}{0.15cm}} \\
+Seedream 4.0 & 2.4\% & [0.9\%, 6.0\%] & 9.10 & \textcolor{oscilloPrimary}{\rule{0.80cm}{0.15cm}} \\
+Gemini 2.5 Flash Image (retired) & 1.2\% & [0.3\%, 4.2\%] & 7.00 & \textcolor{oscilloPrimary}{\rule{0.80cm}{0.15cm}} \\
+\bottomrule
+\end{tabularx}
+
+\textbf{Group preference (crowd guess)}
+\begin{tabularx}{\columnwidth}{lccrX}
+\toprule
+Model & Win Share & 95\% CI & Avg. Decision (s) & Momentum \\
+\midrule
+Seedream 4.0 & 25.0\% & [19.1\%, 32.1\%] & -- & \textcolor{oscilloPrimary}{\rule{1.00cm}{0.15cm}} \\
+Gemini 2.5 Flash Image (retired) & 25.0\% & [19.1\%, 32.1\%] & -- & \textcolor{oscilloPrimary}{\rule{1.00cm}{0.15cm}} \\
+Flux Kontext Max (retired) & 25.0\% & [19.1\%, 32.1\%] & -- & \textcolor{oscilloPrimary}{\rule{1.00cm}{0.15cm}} \\
+Hunyuan Image v3 & 25.0\% & [19.1\%, 32.1\%] & -- & \textcolor{oscilloPrimary}{\rule{1.00cm}{0.15cm}} \\
+\bottomrule
+\end{tabularx}
+
+\subsection*{OpenAI · GPT-5.1 (Thinking)}
+\begin{itemize}[leftmargin=*]
+\item Runs: 24 (matchups: 199).
+\item Leading models: Hunyuan Image v3.
+\item Group-preference leaders: Seedream 4.0, Hunyuan Image v3.
+\item Average decision time when choosing winners: 4.02s.
+\item Runs with shared leaders: 23.
+\end{itemize}
+\textbf{Divergence rationale:} Personal vs group divergence: 184/199 (92.5\\%). Example: Personal B – \{"id":"resp\_04e15bf2a956469600693afd176b18819ca10f483b7ba7bfeb","object":"response","created\_at":1765473559,"status":"completed","backgro... | Group A – \{"id":"resp\_04e15bf2a956469600693afd176b18819ca10f483b7ba7bfeb","object":"response","created\_at":1765473559,"status":"completed","backgro...
+\begin{tabularx}{\columnwidth}{lccrX}
+\toprule
+Model & Win Share & 95\% CI & Avg. Decision (s) & Momentum \\
+\midrule
+Hunyuan Image v3 & 24.6\% & [19.2\%, 31.1\%] & 3.68 & \textcolor{oscilloPrimary}{\rule{0.98cm}{0.15cm}} \\
+Seedream 4.0 & 24.1\% & [18.7\%, 30.5\%] & 3.48 & \textcolor{oscilloPrimary}{\rule{0.96cm}{0.15cm}} \\
+GPT-Image 1 & 22.6\% & [17.4\%, 28.9\%] & 3.79 & \textcolor{oscilloPrimary}{\rule{0.90cm}{0.15cm}} \\
+Imagen 4 Ultra & 12.1\% & [8.2\%, 17.3\%] & 4.00 & \textcolor{oscilloPrimary}{\rule{0.80cm}{0.15cm}} \\
+Flux Kontext Max (retired) & 10.6\% & [7.0\%, 15.6\%] & 3.36 & \textcolor{oscilloPrimary}{\rule{0.80cm}{0.15cm}} \\
+Grok-2 Image & 2.0\% & [0.8\%, 5.1\%] & 13.33 & \textcolor{oscilloPrimary}{\rule{0.80cm}{0.15cm}} \\
+Gemini 3 Pro (image) & 1.5\% & [0.5\%, 4.3\%] & 14.64 & \textcolor{oscilloPrimary}{\rule{0.80cm}{0.15cm}} \\
+Gemini 2.5 Flash Image (retired) & 1.5\% & [0.5\%, 4.3\%] & 2.56 & \textcolor{oscilloPrimary}{\rule{0.80cm}{0.15cm}} \\
+Flux 2 Flex & 1.0\% & [0.3\%, 3.6\%] & 4.83 & \textcolor{oscilloPrimary}{\rule{0.80cm}{0.15cm}} \\
+\bottomrule
+\end{tabularx}
+
+\textbf{Group preference (crowd guess)}
+\begin{tabularx}{\columnwidth}{lccrX}
+\toprule
+Model & Win Share & 95\% CI & Avg. Decision (s) & Momentum \\
+\midrule
+Seedream 4.0 & 25.1\% & [19.6\%, 31.6\%] & -- & \textcolor{oscilloPrimary}{\rule{1.01cm}{0.15cm}} \\
+Hunyuan Image v3 & 25.1\% & [19.6\%, 31.6\%] & -- & \textcolor{oscilloPrimary}{\rule{1.01cm}{0.15cm}} \\
+Gemini 2.5 Flash Image (retired) & 21.1\% & [16.0\%, 27.3\%] & -- & \textcolor{oscilloPrimary}{\rule{0.84cm}{0.15cm}} \\
+Flux Kontext Max (retired) & 21.1\% & [16.0\%, 27.3\%] & -- & \textcolor{oscilloPrimary}{\rule{0.84cm}{0.15cm}} \\
+Imagen 4 Ultra & 7.0\% & [4.2\%, 11.5\%] & -- & \textcolor{oscilloPrimary}{\rule{0.80cm}{0.15cm}} \\
+Grok-2 Image & 6.0\% & [3.5\%, 10.2\%] & -- & \textcolor{oscilloPrimary}{\rule{0.80cm}{0.15cm}} \\
+GPT-Image 1 & 4.0\% & [2.1\%, 7.7\%] & -- & \textcolor{oscilloPrimary}{\rule{0.80cm}{0.15cm}} \\
+Flux 2 Flex & 3.0\% & [1.4\%, 6.4\%] & -- & \textcolor{oscilloPrimary}{\rule{0.80cm}{0.15cm}} \\
+Gemini 3 Pro (image) & 3.0\% & [1.4\%, 6.4\%] & -- & \textcolor{oscilloPrimary}{\rule{0.80cm}{0.15cm}} \\
+\bottomrule
+\end{tabularx}
+
+\end{document}
