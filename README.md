@@ -1,6 +1,6 @@
 # oscillo-vision-reports
 
-Public snapshots of Oscillo's image-model taste tests.
+Short, public summaries of how Oscillo compares image models in taste tests.
 
 ## vision_tri_provider_food_glam (Dec 11, 2025)
 - Preview: ![vision tri-provider snapshot](vision_tri_provider_food_glam/vision_tri_provider_food_glam.pdf.png)
